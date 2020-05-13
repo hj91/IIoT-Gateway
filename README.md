@@ -11,4 +11,4 @@ Features
 2. Comes with complete nodejs and node-red modules installed
 3. INFLUXDB Tick stack is included as default
 4. Industrial protocols supported - Modbus, OPCUA, KNX, AnyBus
-5. Applicaitons can be developed in both Python and NodeJS
+5. Applications can be developed in both Python and NodeJS
