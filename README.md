@@ -12,3 +12,6 @@ Features
 3. INFLUXDB Tick stack is included as default
 4. Industrial protocols supported - Modbus, OPCUA, KNX, AnyBus
 5. Applications can be developed in both Python and NodeJS
+
+
+Download the installer iso from here https://sourceforge.net/projects/iiot-gateway/
