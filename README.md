@@ -15,3 +15,7 @@ Features
 
 
 Download the installer iso from here https://sourceforge.net/projects/iiot-gateway/
+
+Note - this os does not run on raspberry pi or arm processor based sbc. 
+
+Please use standard x86_64 processor powered machine with minimum 2GB ram and minimum 8GB storage. 
