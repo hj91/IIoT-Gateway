@@ -3,7 +3,7 @@ Linux based Open Souce Platform for IIoT Applications
 
 This is IIoT Gateway based on Linux LTS stable software base which allows one to develop, deploy and host IOT, IIoT based applications using Python, NodeJS, Time series based database, mqtt broker.
 
-This is not live CD, it requires installing it on HDD
+This is a live CD, it requires installing it on HDD
 
 Features
 
