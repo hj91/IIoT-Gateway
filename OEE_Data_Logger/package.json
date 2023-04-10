@@ -1,7 +1,7 @@
 {
   "name": "oee-calculator",
-  "version": "0.0.2-beta",
-  "description": "Node.JS program to calculate and log OEE data obtained from MQTT server to InfluxDB",
+  "version": "0.0.2",
+  "description": "Calculate and log OEE data obtained from MQTT server to InfluxDB - THis application is part of Bufferstack.IO Super Factory Suite",
   "main": "index.js",
   "dependencies": {
     "config": "^3.3.6",
@@ -19,7 +19,6 @@
   "author": "Harshad Joshi",
   "email": "harshad@bufferstack.io",
   "license": "GPL-3.0",
-  "readme": "This is an application to log OEE data to InfluxDB.\n\nUsage:\n1. Clone the repository.\n2. Install the dependencies by running npm install.\n3. Create a .env file and add the necessary environment variables as described in the config.js file.\n4. Run the program using npm start.\n\nGitHub Repository: https://github.com/hj91/oee-data-logger\nEmail: harshad@bufferstack.io",
   "keywords": [
     "",
     "IOT",
@@ -34,6 +33,9 @@
   ],
   "devDependencies": {
     "mocha": "^10.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hj91/IIoT-Gateway/tree/master/OEE_Data_Logger"
   }
 }
-
