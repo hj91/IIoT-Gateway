@@ -1,0 +1,39 @@
+{
+  "name": "oee-calculator",
+  "version": "0.0.2-beta",
+  "description": "Node.JS program to calculate and log OEE data obtained from MQTT server to InfluxDB",
+  "main": "index.js",
+  "dependencies": {
+    "config": "^3.3.6",
+    "dotenv": "16.0.3",
+    "influx": "^5.9.3",
+    "mqtt": "^4.2.1"
+  },
+  "bin": {
+    "oee-calculator": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "author": "Harshad Joshi",
+  "email": "harshad@bufferstack.io",
+  "license": "GPL-3.0",
+  "readme": "This is an application to log OEE data to InfluxDB.\n\nUsage:\n1. Clone the repository.\n2. Install the dependencies by running npm install.\n3. Create a .env file and add the necessary environment variables as described in the config.js file.\n4. Run the program using npm start.\n\nGitHub Repository: https://github.com/hj91/oee-data-logger\nEmail: harshad@bufferstack.io",
+  "keywords": [
+    "",
+    "IOT",
+    "IIOT",
+    "automation",
+    "industry40",
+    "mqtt",
+    "oee",
+    "oee industry automation",
+    "Harshad Joshi",
+    "Bufferstack.IO"
+  ],
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
+

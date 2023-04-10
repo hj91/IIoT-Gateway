@@ -1,0 +1,32 @@
+{
+  "mqtt": {
+    "servers": [
+      {
+        "host": "localhost",
+        "port": 1883,
+        "username": "",
+        "password": ""
+      }
+    ]
+  },
+  "influxdb": {
+    "host": "localhost",
+    "port": 8086,
+    "database": "oee",
+    "username": "",
+    "password": "",
+    "logging_interval": 10000
+  },
+  "machines": [
+    {
+      "name": "Machine1",
+      "topic": "oee/machine1"
+    },
+    {
+      "name": "Machine2",
+      "topic": "oee/machine2"
+    }
+  ],
+  "mqttReadInterval": 5000
+}
+
