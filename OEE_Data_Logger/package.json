@@ -1,7 +1,7 @@
 {
   "name": "oee-calculator",
-  "version": "0.0.2",
-  "description": "Calculate and log OEE data obtained from MQTT server to InfluxDB - THis application is part of Bufferstack.IO Super Factory Suite",
+  "version": "0.0.3",
+  "description": "Calculate and log OEE data obtained from MQTT server to InfluxDB - This application is part of Bufferstack.IO Super Factory Suite",
   "main": "index.js",
   "dependencies": {
     "config": "^3.3.6",
@@ -20,16 +20,18 @@
   "email": "harshad@bufferstack.io",
   "license": "GPL-3.0",
   "keywords": [
-    "",
     "IOT",
     "IIOT",
     "automation",
     "industry40",
     "mqtt",
-    "oee",
+    "OEE",
+    "Industrial Machine KPI",
+    "Factory Automation",
     "oee industry automation",
     "Harshad Joshi",
-    "Bufferstack.IO"
+    "Bufferstack.IO",
+    "Pune"
   ],
   "devDependencies": {
     "mocha": "^10.2.0"
