@@ -1,6 +1,6 @@
 {
   "name": "oee-calculator",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Calculate and log OEE data obtained from MQTT server to InfluxDB - This application is part of Bufferstack.IO Super Factory Suite",
   "main": "index.js",
   "dependencies": {
@@ -39,5 +39,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/hj91/IIoT-Gateway/tree/master/OEE_Data_Logger"
+  },
+  "config": {
+    "dir": "/etc/oee-calculator"
+  },
+  "scripts": {
+    "install": "mkdir -p /etc/oee-calculator && cp config.json /etc/oee-calculator/"
   }
 }
+
