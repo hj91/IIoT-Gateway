@@ -8,12 +8,12 @@ const { InfluxDB } = require('influx');
 const fs = require('fs');
 
 // Check if config.json exists
-if (!fs.existsSync('./config.json')) {
+if (!fs.existsSync('/etc/oee-calculator/config.json')) {
   console.error('Contact Harshad for details of error CJ00 - Error: config.json file not found');
   process.exit(1);
 }
 
-const config = require ('./config.json');
+const config = require ('/etc/oee-calculator/config.json');
 
 
 // Create a new InfluxDB instance with configuration options from the config file
