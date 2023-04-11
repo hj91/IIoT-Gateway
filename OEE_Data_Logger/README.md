@@ -8,7 +8,7 @@ sudo npm install oee-calculator -g
 After installation, the program can be executed by running the oee-calculator command in the terminal.
 
 Configuration
-The config.json file contains the configuration for the MQTT server and InfluxDB database connections, as well as the topic names for each machine's OEE data.
+The /etc/oee-calculator/config.json file contains the configuration for the MQTT server and InfluxDB database connections, as well as the topic names for each machine's OEE data.
 
 An example config.json file:
 
@@ -42,7 +42,7 @@ An example config.json file:
   ]
 }
 
-Edit the config.json file to add the proper address for the MQTT broker and InfluxDB server. If the config.json file is not found in the global node_modules directory, the program will exit.
+Edit the /etc/oee-calculator/config.json file to add the proper address for the MQTT broker and InfluxDB server. If the config.json file is not found in the global node_modules directory, the program will exit.
 
 Usage
 The expected message sent to each machine's MQTT topic should include JSON data with the following fields: runTime, totalTime, targetSpeed, totalProduced, and goodProduced.
