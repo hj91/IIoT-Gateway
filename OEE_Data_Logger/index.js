@@ -75,27 +75,37 @@ client.on('message', (topic, message) => {
   const oee = availability * performance * quality;
 
   // Write data to InfluxDB
-  influx.writePoints([
-    {
-      measurement: machine.name,
-      tags: {
-        machine: machine.name,
+  influx.getDatabaseNames()
+  .then((names) => {
+    if (!names.includes(config.influxdb.database)) {
+      console.log(`Database '${config.influxdb.database}' does not exist, creating it now...`);
+      return influx.createDatabase(config.influxdb.database);
+    }
+  })
+  .then(() => {
+    console.log(`Writing data for machine ${machine.name} to InfluxDB`);
+    return influx.writePoints([
+      {
+        measurement: machine.name,
+        tags: {
+          machine: machine.name,
+        },
+        fields: {
+          availability,
+          performance,
+          quality,
+          oee,
+        },
       },
-      fields: {
-        availability,
-        performance,
-        quality,
-        oee,
-      },
-    },
-  ])
+    ]);
+  })
   .then(() => {
     console.log(`Successfully wrote data for machine ${machine.name} to InfluxDB`);
   })
   .catch((error) => {
     console.error(`Failed to write data for machine ${machine.name} to InfluxDB:`, error);
   });
-});
+}); //db handling code ends 
 
 console.log('\n oee-calculator - Calculate and log OEE data obtained from MQTT server to InfluxDB by Bufferstack.IO Analytics Technology LLP. 2023 \n');
 
