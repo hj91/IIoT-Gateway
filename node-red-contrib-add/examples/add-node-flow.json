@@ -1,0 +1,175 @@
+[
+    {
+        "id": "7ff5a43fb77458bf",
+        "type": "tab",
+        "label": "add node howto",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6809fb83313f7575",
+        "type": "inject",
+        "z": "7ff5a43fb77458bf",
+        "name": "number 1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "one",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 600,
+        "y": 220,
+        "wires": [
+            [
+                "2d84def151f41484"
+            ]
+        ]
+    },
+    {
+        "id": "87f267e5954eb1cd",
+        "type": "debug",
+        "z": "7ff5a43fb77458bf",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 930,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "35e386726410fc03",
+        "type": "inject",
+        "z": "7ff5a43fb77458bf",
+        "name": "number 2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "two",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 680,
+        "y": 280,
+        "wires": [
+            [
+                "2d84def151f41484"
+            ]
+        ]
+    },
+    {
+        "id": "e5e56ef201e9a80e",
+        "type": "inject",
+        "z": "7ff5a43fb77458bf",
+        "name": "inject reset to make add node output 0 ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "reset",
+        "payload": "reset",
+        "payloadType": "str",
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "491a48650b8c19b8",
+                "764c579ef2403b3e"
+            ]
+        ]
+    },
+    {
+        "id": "491a48650b8c19b8",
+        "type": "debug",
+        "z": "7ff5a43fb77458bf",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 550,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "764c579ef2403b3e",
+        "type": "function",
+        "z": "7ff5a43fb77458bf",
+        "name": "reset the add node",
+        "func": "msg.payload = \"reset\"\nmsg.reset = msg.payload\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 120,
+        "wires": [
+            [
+                "2d84def151f41484"
+            ]
+        ]
+    },
+    {
+        "id": "2d84def151f41484",
+        "type": "add",
+        "z": "7ff5a43fb77458bf",
+        "name": "",
+        "topic": "",
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "87f267e5954eb1cd"
+            ]
+        ]
+    },
+    {
+        "id": "675df9a9cbd709da",
+        "type": "comment",
+        "z": "7ff5a43fb77458bf",
+        "name": "Sample flow for adding incoming input",
+        "info": "Just a simple node to add incoming message value and display the total \n\nSending msg.payload with property reset will reset the output of add node to 0\n\nHarshad Joshi @ Bufferstack.IO Analytics Technology LLP, Pune",
+        "x": 190,
+        "y": 40,
+        "wires": []
+    }
+]
