@@ -26,10 +26,8 @@
     },
     "homepage": "https://github.com/hj91/node-red-contrib-analog-alarm-monitor#readme",
     "node-red": {
-        "version": ">=1.0.0",
         "nodes": {
             "analog-alarm": "./analog-alarm.js"
         }
     }
 }
-
