@@ -1,0 +1,35 @@
+{
+    "name": "node-red-contrib-analog-alarm-monitor",
+    "version": "1.0.3",
+    "description": "A Node-RED node for monitoring analog alarms.",
+    "main": "analog-alarm.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hj91/node-red-contrib-analog-alarm-monitor.git"
+    },
+    "keywords": [
+        "node-red",
+        "analog",
+        "alarm",
+        "monitoring",
+        "Bufferstack.IO",
+        "Pune",
+        "Process Control"
+    ],
+    "author": "Harshad Joshi",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/hj91/node-red-contrib-analog-alarm-monitor/issues"
+    },
+    "homepage": "https://github.com/hj91/node-red-contrib-analog-alarm-monitor#readme",
+    "node-red": {
+        "version": ">=1.0.0",
+        "nodes": {
+            "analog-alarm": "./analog-alarm.js"
+        }
+    }
+}
+
